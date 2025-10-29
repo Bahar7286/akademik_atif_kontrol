@@ -1,0 +1,8 @@
+streamlit
+requests
+python-docx
+PyMuPDF
+beautifulsoup4
+python-dotenv
+pandas
+altair
