@@ -8,6 +8,9 @@ def extract_pdf_from_search(results):
     """
     keywords = ["pdf", "makale", "tez", "download", "fulltext", "article", "view"]
 
+    if not results:
+        return None
+
     for result in results:
         url = result.get("url", "").lower()
         title = result.get("title", "").lower()
@@ -50,3 +53,9 @@ def search_pdf_sources(query):
             print(f"Arama hatası ({site}):", e)
 
     return best_url
+
+def get_pdf_link_from_sources(title_or_doi: str) -> str:
+    """
+    Dışarıdan çağrılabilir fonksiyon: başlığa göre en uygun PDF bağlantısını döndürür.
+    """
+    return search_pdf_sources(title_or_doi)
