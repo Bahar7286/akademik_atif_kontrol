@@ -8,3 +8,7 @@ pandas
 altair
 nltk
 sentence-transformers
+scikit-learn
+transformers
+tqdm
+lxml
