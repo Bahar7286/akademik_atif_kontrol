@@ -1,6 +1,11 @@
 import nltk
-nltk.download('punkt')
+from nltk.tokenize import sent_tokenize
+
+# Punkt verisi eksikse indir
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
 
 def split_sentences(text):
-    from nltk.tokenize import sent_tokenize
-    return sent_tokenize(text, language='turkish')
+    return sent_tokenize(text, language="turkish")
