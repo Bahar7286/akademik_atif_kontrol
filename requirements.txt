@@ -7,3 +7,4 @@ python-dotenv
 pandas
 altair
 nltk
+sentence-transformers
